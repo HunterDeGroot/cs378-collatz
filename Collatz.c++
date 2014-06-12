@@ -28,12 +28,38 @@ std::pair<int, int> collatz_read (std::istream& r) {
     return std::make_pair(i, j);}
 
 // ------------
+// collatz_cycles
+// ------------
+
+int collatz_cycles (int x){
+	
+	int cycles = 1;
+	while(x > 1){
+		if( x % 2 == 0)
+			x = x/2;
+		else
+			x = x * 3 + 1;
+		cycles++;
+	}
+	return cycles;
+}
+
+// ------------
 // collatz_eval
 // ------------
 
 int collatz_eval (int i, int j) {
-    // <your code>
-    return 1;}
+    // my code
+    int biggest = 0;
+    while(i <= j) {
+    
+    	int x = collatz_cycles(i);
+    	if(x > biggest)
+    		biggest = x;
+    	i++;
+    }		
+    
+    return biggest;}
 
 // -------------
 // collatz_print

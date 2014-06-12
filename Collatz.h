@@ -26,6 +26,15 @@
 std::pair<int, int> collatz_read (std::istream&);
 
 // ------------
+// collatz_cycles
+// ------------
+
+/**
+ * @param x is the number whose cycle number is being evaluated
+ */
+int collatz_cycles (int);
+
+// ------------
 // collatz_eval
 // ------------
 
