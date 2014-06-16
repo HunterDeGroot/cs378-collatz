@@ -51,11 +51,20 @@ int collatz_cycles (int x){
 int collatz_eval (int i, int j) {
     // my code
     int biggest = 0;
+
+    // set i to be the min and j to be max
+    if( i > j){
+        int temp = i;
+        i = j;
+        j = temp;
+    }
+
     while(i <= j) {
     
     	int x = collatz_cycles(i);
-    	if(x > biggest)
+    	if(x > biggest) {
     		biggest = x;
+        }
     	i++;
     }		
     
