@@ -32,7 +32,7 @@ std::pair<int, int> collatz_read (std::istream& r) {
 // ------------
 
 int collatz_cycles (int x){
-	
+
 	int cycles = 1;
 	while(x > 1){
 		if( x % 2 == 0)
@@ -48,7 +48,7 @@ int collatz_cycles (int x){
 // collatz_eval
 // ------------
 
-int collatz_eval (int i, int j) {
+int collatz_eval (int i, int j, int cache[]) {
     // my code
     int biggest = 0;
 
@@ -60,8 +60,19 @@ int collatz_eval (int i, int j) {
     }
 
     while(i <= j) {
-    
-    	int x = collatz_cycles(i);
+    	
+    	int x;
+    	
+    	// check to see if i's cycles have been calculated if not, calculate it
+    	if(i > 999)
+    		x = collatz_cycles(i);
+    	else if(cache[i] == 0) {
+    		x = collatz_cycles(i);
+    		cache[i] = x;	
+    	}
+    	else
+    		x = cache[i];
+    		
     	if(x > biggest) {
     		biggest = x;
         }
@@ -82,13 +93,17 @@ void collatz_print (std::ostream& w, int i, int j, int v) {
 // -------------
 
 void collatz_solve (std::istream& r, std::ostream& w) {
+
+	// can hold up to 1k cache values
+	int cache [1000] = {};
+
     while (true) {
         const std::pair<int, int> p = collatz_read(r);
         if (p == std::make_pair(0, 0))
             return;
-        const int v = collatz_eval(p.first, p.second);
+        const int v = collatz_eval(p.first, p.second, cache);
         collatz_print(w, p.first, p.second, v);}}
-
+        
 // -------------------------------
 // projects/collatz/RunCollatz.c++
 // Copyright (C) 2014
@@ -197,3 +212,4 @@ Creating 'RunCollatz.c++.gcov'
 ...
 */
 
+        

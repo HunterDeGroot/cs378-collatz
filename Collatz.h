@@ -43,7 +43,7 @@ int collatz_cycles (int);
  * @param j the end       of the range, inclusive
  * @return the max cycle length in the range [i, j]
  */
-int collatz_eval (int, int);
+int collatz_eval (int, int, int[]);
 
 // -------------
 // collatz_print
