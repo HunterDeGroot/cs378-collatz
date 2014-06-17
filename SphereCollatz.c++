@@ -33,7 +33,11 @@ std::pair<int, int> collatz_read (std::istream& r) {
 
 int collatz_cycles (int x){
 
+	// should never have negative input
+	assert(x > 0);
+
 	int cycles = 1;
+	
 	while(x > 1){
 		if( x % 2 == 0)
 			x = x/2;
@@ -41,6 +45,9 @@ int collatz_cycles (int x){
 			x = x * 3 + 1;
 		cycles++;
 	}
+	
+	// should always be at least one cycle
+	assert(cycles > 0);
 	return cycles;
 }
 
@@ -49,6 +56,7 @@ int collatz_cycles (int x){
 // ------------
 
 int collatz_eval (int i, int j, int cache[]) {
+    
     // my code
     int biggest = 0;
 
@@ -63,9 +71,11 @@ int collatz_eval (int i, int j, int cache[]) {
     	
     	int x;
     	
-    	// check to see if i's cycles have been calculated if not, calculate it
+    	// cache limited so check if i is in bounds
     	if(i > 999)
     		x = collatz_cycles(i);
+    		
+    	// add to cache if missing
     	else if(cache[i] == 0) {
     		x = collatz_cycles(i);
     		cache[i] = x;	
@@ -73,9 +83,11 @@ int collatz_eval (int i, int j, int cache[]) {
     	else
     		x = cache[i];
     		
+    	// if the cycles(i) is bigger than the recorded biggest, replace
     	if(x > biggest) {
     		biggest = x;
         }
+        
     	i++;
     }		
     
