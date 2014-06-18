@@ -1,0 +1,78 @@
+commit 66f5831baec974a00c14a70f7114306b3a1e1268
+Author: Hunter DeGroot <huntutinfo@yahoo.com>
+Date:   Tue Jun 17 19:13:44 2014 -0500
+
+    Doxyfile
+
+commit 888b69d295400674f3ca934399a76d267163a5ef
+Author: Hunter DeGroot <huntutinfo@yahoo.com>
+Date:   Tue Jun 17 19:13:35 2014 -0500
+
+    Google Tests
+
+commit 7c0278c5e269764b84b1ceae7a930a9f23072576
+Author: Hunter DeGroot <huntutinfo@yahoo.com>
+Date:   Tue Jun 17 17:28:34 2014 -0500
+
+    Ran Tests
+    
+    Solving Tests Issue
+
+commit 3b61a0343fc1d7b31bb0aa6bffc6c53dc298a8b4
+Author: Hunter DeGroot <huntutinfo@yahoo.com>
+Date:   Tue Jun 17 14:36:35 2014 -0500
+
+    Assertions
+
+commit 8b89e7e32ccc46c20d76f6e632a1259fc3ab4d11
+Author: Hunter DeGroot <huntutinfo@yahoo.com>
+Date:   Tue Jun 17 14:23:01 2014 -0500
+
+    Cache Works in Sphere
+    
+    Had to use array v.s. map
+
+commit 0435651601d8db2bcbca14047b76ccc759f27ef9
+Author: Hunter DeGroot <huntutinfo@yahoo.com>
+Date:   Mon Jun 16 18:47:04 2014 -0500
+
+    Fixed backwards range issue which passed sphere
+
+commit 02ff0878f4188b7bd2abe67d362783e8a37b90f0
+Author: Hunter DeGroot <huntutinfo@yahoo.com>
+Date:   Thu Jun 12 16:32:18 2014 -0500
+
+    First Solution
+
+commit bf18839481a4ca2430e70cb65f223d187600f11d
+Author: HunterDeGroot <hunterdegroot@gmail.com>
+Date:   Wed Jun 11 18:29:21 2014 -0500
+
+    Create README.md
+
+commit 2b9ff95f3d32a6fed8416f8992496dba89f9a8bf
+Author: Hunter DeGroot <huntutinfo@yahoo.com>
+Date:   Wed Jun 11 16:32:24 2014 -0500
+
+    Skeleton
+
+commit 6c855f54996e934fb5930689cc460b793cd739a4
+Author: Hunter DeGroot <huntutinfo@yahoo.com>
+Date:   Wed Jun 11 16:24:08 2014 -0500
+
+    Revert "first commit"
+    
+    This reverts commit f5847d7e8689f4c6c50f972d2321c152d078e685.
+
+commit 2369a9a648fb59a066f6766ef5ca109987a13693
+Author: Hunter DeGroot <huntutinfo@yahoo.com>
+Date:   Wed Jun 11 16:24:01 2014 -0500
+
+    Revert "Merge branch 'master' of github.com:HunterDeGroot/cs378-collatz"
+    
+    This reverts commit 28291ab02a32a85f69a87733f9a1aaafebdfa4b3, reversing
+    changes made to f5847d7e8689f4c6c50f972d2321c152d078e685.
+
+commit db75c43c1d157b6da507be32cd51b143e078976a
+Author: Hunter DeGroot <huntutinfo@yahoo.com>
+:
